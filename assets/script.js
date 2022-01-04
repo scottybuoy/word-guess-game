@@ -64,11 +64,17 @@ function populate(letterPressed) {
         // document.getElementById("blank-word").innerHTML[randomWord.indexOf(letterKeyed)] = letterKeyed
         var currentWord = document.getElementById("blank-word").innerHTML;
         console.log(currentWord);
+        // used this: https://www.samanthaming.com/tidbits/83-4-ways-to-convert-string-to-character-array/
+        var currentWordArray = currentWord.split('');
+        console.log(currentWordArray);
 
-        currentWord[randomWord.indexOf(letterKeyed)] = letterKeyed;
+        currentWordArray[randomWord.indexOf(letterKeyed)] = letterKeyed;
+        console.log(currentWordArray);
+        currentWord = currentWordArray.toString();
         console.log(currentWord);
         document.getElementById("blank-word").innerHTML = currentWord;
     }
 }
 
     // then create an if statement in the event user does not select one of the letters in the word
+"h", "e"
