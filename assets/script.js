@@ -10,17 +10,17 @@ var formCont = document.querySelector("#formCont");
 
 
 
-startButton.addEventListener("click", trans1);
+// startButton.addEventListener("click", trans1);
 
-function trans1() {
-    mainCont.removeChild(startButton);
-    mainCont.removeChild(title);
-    formCont.setAttribute("style", "display: flex;");
-    var testP = document.createElement("span");
-    testP.setAttribute("id", "spanTest");
-    mainCont.appendChild(testP);
-    testP.textContent = "okkk";
+// function trans1() {
+//     mainCont.removeChild(startButton);
+//     mainCont.removeChild(title);
+//     formCont.setAttribute("style", "display: flex;");
+//     var testP = document.createElement("span");
+//     testP.setAttribute("id", "spanTest");
+//     mainCont.appendChild(testP);
+//     testP.textContent = "okkk";
 
 
-};
+// };
 
