@@ -3,6 +3,7 @@ var timerElement = document.querySelector("#timer");
 // var guessWord = document.querySelector("");
 var wins = document.querySelector("#wins");
 var losses = document.querySelector("#loss");
+var randomWord = "";
 // var formCont = document.querySelector("#formCont");
 
 
@@ -35,19 +36,29 @@ function start() {
     //created a variable to store the random index that is selected
     var randomIndex= Math.floor(Math.random() * words.length);
     // now we want to grab the word that is in the index selected randomly
-    var randomWord= words[randomIndex];
+    randomWord= words[randomIndex];
     console.log(randomWord);
     // get the length of the random word and create lines for each letter in the word
     var wordLength= randomWord.length;
+    console.log(wordLength);
     // this will remove the inner html
     document.getElementById("blank-word").innerHTML=""   
     // this will replace the inner html with 1 underscore for each letter in the word
     for (let i = 0; i < wordLength; i++) {
         document.getElementById("blank-word").innerHTML+=" _ "
     }
+}
 
-    //now we want to have the blank spaces populate for the random word that was chosen
+// using key down, we'd see if the user selected a letter in the randomWord and make it appear
+document.addEventListener("keydown", populate);
+
+function populate(letterPressed) {
+    var letterKeyed = letterPressed.key;
+    console.log(letterPressed.key);
+
+    if (randomWord.indexOf(letterKeyed) > -1) {
+        console.log("you got it!");
+    }
+}
 
     // then create an if statement in the event user does not select one of the letters in the word
-
-}
