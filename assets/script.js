@@ -31,12 +31,21 @@ timer();
 // add event listener to start button 
 startButton.addEventListener("click", start);
 // select a random index in the array
-    function start() {
+function start() {
     //created a variable to store the random index that is selected
     var randomIndex= Math.floor(Math.random() * words.length);
     // now we want to grab the word that is in the index selected randomly
     var randomWord= words[randomIndex];
     console.log(randomWord);
+    // get the length of the random word and create lines for each letter in the word
+    var wordLength= randomWord.length;
+    // this will remove the inner html
+    document.getElementById("blank-word").innerHTML=""   
+    // this will replace the inner html with 1 underscore for each letter in the word
+    for (let i = 0; i < wordLength; i++) {
+        document.getElementById("blank-word").innerHTML+=" _ "
+    }
+
     //now we want to have the blank spaces populate for the random word that was chosen
 
     // then create an if statement in the event user does not select one of the letters in the word
