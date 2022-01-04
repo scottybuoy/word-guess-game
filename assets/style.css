@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+    color: rgb(45, 48, 59);
+}
+
+#mainCont {
+    width: 100%;
+    margin: auto;
+}
+
+#title {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 15%;
+}
+
+#titleSpan {
+    font-style: italic;
+    font-weight: 100;
+    color:rgb(93, 95, 119);
+}
+
+#startButton {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 20px;
+    font-style: italic;
+    padding: 14px;
+    border-radius: 15px;
+    text-align: right;
+    color: white;
+    border: none;
+    background-color: rgb(60, 63, 95);
+    cursor: pointer;
+}
+
+
+
