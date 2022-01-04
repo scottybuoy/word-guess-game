@@ -57,7 +57,17 @@ function populate(letterPressed) {
     console.log(letterPressed.key);
 
     if (randomWord.indexOf(letterKeyed) > -1) {
-        console.log("you got it!");
+        // we want to change the inner html but in order to do that, we need to find what index the letter is in
+        randomWord.indexOf(letterKeyed) 
+        console.log(randomWord.indexOf(letterKeyed));
+        // now that we have the index of the letter that was keyed, we need to replace the inner HTML with that letter
+        // document.getElementById("blank-word").innerHTML[randomWord.indexOf(letterKeyed)] = letterKeyed
+        var currentWord = document.getElementById("blank-word").innerHTML;
+        console.log(currentWord);
+
+        currentWord[randomWord.indexOf(letterKeyed)] = letterKeyed;
+        console.log(currentWord);
+        document.getElementById("blank-word").innerHTML = currentWord;
     }
 }
 
